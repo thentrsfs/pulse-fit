@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --bg-dark: #0B0C10;
-  --bg-card: #1F232B;
+  /* Mnogo prijatnija, luksuznija tamna nijansa (duboki obsidian/slate) */
+  --bg-dark: #12141C; 
+  /* Svijetlija, čista siva za luksuzne kartice koje "iskaču" iz pozadine */
+  --bg-card: #1C1F2E; 
+  /* Cyber Lime ostaje, ali je sada tretiramo kao čistu neonsku energiju */
   --cyber-lime: #CCFF00;
   --text-primary: #FFFFFF;
-  --text-muted: #8A94A6;
+  /* Podižemo svetlinu sporednog teksta da bude čitljiviji */
+  --text-muted: #A3AED0; 
 }
 
 @theme {
@@ -15,16 +19,13 @@
   --color-text-primary: var(--text-primary);
   --color-text-muted: var(--text-muted);
 
-  /* Mapiranje naših novih tech fontova */
   --font-display: var(--font-tech-heading);
   --font-body: var(--font-tech-body);
 
   --animate-shimmer: shimmer 1s ease-in-out infinite;
 
   @keyframes shimmer {
-    100% {
-      transform: translateX(100%);
-    }
+    100% { transform: translateX(100%); }
   }
 }
 
@@ -33,7 +34,4 @@ html, body {
   color: var(--text-primary);
   font-family: var(--font-tech-body), sans-serif;
   scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
 }
