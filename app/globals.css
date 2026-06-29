@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Definicija CSS varijabli za našu paletu */
+  --bg-dark: #0B0C10;
+  --bg-card: #1F232B;
+  --cyber-lime: #CCFF00;
+  --text-primary: #FFFFFF;
+  --text-muted: #8A94A6;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Mapiranje varijabli u Tailwind klase (v4 sintaksa) */
+  --color-bg-dark: var(--bg-dark);
+  --color-bg-card: var(--bg-card);
+  --color-cyber-lime: var(--cyber-lime);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Dodajemo i animaciju bljeska (shimmer) direktno u temu */
+  --animate-shimmer: shimmer 1s ease-in-out infinite;
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Globalni reseti i osnovni stilovi */
+html, body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: sans-serif; /* Kasnije možemo ubaciti neku brutalnu font familiju */
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom stil za scrollbar da prati vibe aplikacije */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyber-lime);
 }
