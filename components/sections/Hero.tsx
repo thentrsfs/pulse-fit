@@ -59,7 +59,7 @@ export default function Hero() {
 					loop
 					muted
 					playsInline
-					className='w-full h-full object-cover opacity-35 filter  contrast-110'
+					className='w-full h-full object-cover opacity-50 filter contrast-110'
 					src='video/video-1.mp4'
 				/>
 				<div className='absolute inset-0 bg-linear-to-r from-bg-dark via-bg-dark/40 to-bg-dark' />
