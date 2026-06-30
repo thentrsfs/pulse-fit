@@ -193,11 +193,12 @@ export default function BeforeAfter() {
 				<div
 					ref={beforeContainerRef}
 					className='absolute inset-x-0 top-0 w-full h-full z-20 overflow-hidden'>
+					<div className='absolute top-0 left-0 w-full h-50 bg-linear-to-b from-bg-dark via-bg-dark/20 to-transparent pointer-events-none z-10' />
+					<div className='absolute inset-0 w-full h-full bg-bg-dark/50 z-20' />
 					<div
-						className='absolute left-0 top-0 w-full h-screen bg-cover bg-center filter brightness-60 grayscale-50 contrast-100'
+						className='absolute left-0 top-0 w-full h-screen bg-cover bg-center grayscale-60 contrast-100'
 						style={{ backgroundImage: `url('/images/before.jpg')` }}
 					/>
-
 					{/* BEFORE METRIKE (Preklapa se tačno preko After trake na mobilnom) */}
 					<div className='absolute z-30 pointer-events-none w-full md:w-64 flex flex-row flex-wrap justify-center gap-2 px-4 bottom-24 left-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:left-16 md:right-auto md:flex-col md:gap-3'>
 						{metrics.map((m) => (
