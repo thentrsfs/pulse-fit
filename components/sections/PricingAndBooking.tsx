@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 export default function PricingAndBooking() {
 	const containerRef = useRef<HTMLDivElement>(null);
 
-	// Tvoj živi Schedulify link ka javnoj stranici biznisa
 	const SCHEDULIFY_PUBLIC_URL =
 		'https://schedulify-4tvf.vercel.app/book/vrtx-metabolic-lab';
 
@@ -184,7 +183,6 @@ export default function PricingAndBooking() {
 						</div>
 					</div>
 
-					{/* ŽIVI IFRAME KOJI ODMAH POKAZUJE TVOJ SISTEM */}
 					<div className='w-full min-h-187 bg-black/50 relative border border-white/5 z-20'>
 						<iframe
 							src={SCHEDULIFY_PUBLIC_URL}

@@ -62,7 +62,7 @@ export default function BeforeAfter() {
 				const tl = gsap.timeline({
 					scrollTrigger: {
 						trigger: triggerRef.current,
-						start: 'top top', // Možeš staviti 'top top' sa pinovanjem za stabilnost
+						start: 'top top',
 						end: '+=120%', // Zaključava ekran dok skener ne prođe
 						scrub: 0.6,
 						pin: true,

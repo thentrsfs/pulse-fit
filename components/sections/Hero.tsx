@@ -53,7 +53,6 @@ export default function Hero() {
 			{/* 2. POZADINSKI VIDEO */}
 			<div className='absolute inset-0 z-0 pr-0 md:pr-20'>
 				{' '}
-				{/* Ostavljamo prostor za desni sajdbar */}
 				<video
 					autoPlay
 					loop
@@ -77,7 +76,7 @@ export default function Hero() {
 					</div>
 				</div>
 
-				{/* MIDDLE ROW: Ogroman, pomeren naslov (Bleed izgled) */}
+				{/* MIDDLE ROW: Ogroman, pomeren naslov */}
 				<div className='w-full my-auto'>
 					<h1 className='huge-title opacity-0 font-display text-5xl md:text-[9vw] font-black text-text-primary uppercase md:leading-[0.8] leading-none tracking-tighter max-w-4xl'>
 						OWN YOUR <br />
@@ -92,7 +91,6 @@ export default function Hero() {
 
 				{/* BOTTOM ROW: Lebdeća tehnička kartica u desnom uglu */}
 				<div className='w-full flex max-md:flex-col gap-3 justify-between items-end'>
-					{/* Levica ostaje prazna, daje prostor videu da "diše" */}
 					<div className='hidden md:block text-[10px] font-mono tracking-widest text-text-muted'>
 						[ MODEL: ALPHA_PHASE ] <br />[ FOCUS: POSTERIOR_CHAIN ]
 					</div>
@@ -121,7 +119,7 @@ export default function Hero() {
 				</div>
 			</div>
 
-			{/* 4. DESNI FIKSIRANI CTA SAJDBAR (Zaboravi klasične gumbiće) */}
+			{/* 4. DESNI FIKSIRANI CTA SAJDBAR */}
 			<div className='aside-bar hidden opacity-0 absolute top-0 right-0 h-full w-20 md:w-25 border-l border-white/10 bg-bg-card/20 backdrop-blur-md z-20 md:flex flex-col items-center justify-between py-12'>
 				{/* Gornji indeks u sajdbaru */}
 				<div className='text-[10px] font-mono tracking-widest text-text-muted rotate-90 my-4 uppercase whitespace-nowrap'>
