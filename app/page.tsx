@@ -10,10 +10,11 @@ import PricingAndBooking from '@/components/sections/PricingAndBooking';
 import Faq from '@/components/sections/Faq';
 import Footer from '@/components/sections/Footer';
 import SplashScreen from '@/components/SplashScreen';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
 	const mainContentRef = useRef<HTMLDivElement>(null);
+	const [startHeroAnim, setStartHeroAnim] = useState(false);
 
 	useEffect(() => {
 		// Sprečavamo skakanje stranice tako što fiksiramo scrollbar prostor odmah
@@ -24,6 +25,8 @@ export default function Home() {
 	const handleSplashComplete = () => {
 		// Otključavamo skrol tek kada je zavesa skroz podignuta
 		document.body.style.overflow = '';
+
+		setStartHeroAnim(true);
 
 		// Ultra glatki ulazak Hero sekcije
 		gsap.fromTo(
@@ -40,7 +43,7 @@ export default function Home() {
 				className='relative bg-bg-dark text-text-primary'>
 				<Navbar />
 				<main>
-					<Hero />
+					<Hero startAnimation={startHeroAnim} />
 					<BeforeAfter />
 					<Timeline />
 					<PricingAndBooking />

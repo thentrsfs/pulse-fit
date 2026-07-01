@@ -3,17 +3,23 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-export default function Hero() {
+interface HeroProps {
+	startAnimation: boolean;
+}
+
+export default function Hero({ startAnimation }: HeroProps) {
 	const container = useRef<HTMLDivElement>(null);
 
 	useGSAP(
 		() => {
+			if (!startAnimation) return;
 			const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
 			tl.fromTo(
 				'.ambient-glow',
 				{ opacity: 0, scale: 0.8 },
 				{ opacity: 0.12, scale: 1, duration: 2 },
+				'-=0.5',
 			)
 				.fromTo(
 					'.aside-bar',
@@ -40,7 +46,7 @@ export default function Hero() {
 					'-=0.5',
 				);
 		},
-		{ scope: container },
+		{ scope: container, dependencies: [startAnimation] },
 	);
 
 	return (
