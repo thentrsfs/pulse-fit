@@ -132,7 +132,7 @@ export default function BeforeAfter() {
 			id='before-after-section'
 			className='relative w-full h-screen bg-bg-dark overflow-hidden font-body select-none'>
 			{/* LEVO: ASIMETRIČNI NASLOV SEKCIJE */}
-			<div className='absolute top-6 left-6 md:top-12 md:left-16 z-30 max-w-md pointer-events-none'>
+			<div className='absolute top-6 left-6 md:top-22 md:left-16 z-30 max-w-md pointer-events-none'>
 				<span className='text-cyber-lime font-mono tracking-[0.3em] text-[10px] md:text-xs uppercase block mb-1 md:mb-3'>
 					{'// RADICAL TRANSFORMATION'}
 				</span>
@@ -143,7 +143,7 @@ export default function BeforeAfter() {
 			</div>
 
 			{/* DESNO: TECH INFO */}
-			<div className='absolute top-6 right-6 md:top-12 md:right-16 z-30 text-right font-mono text-[9px] md:text-[10px] tracking-widest text-text-muted hidden sm:block'>
+			<div className='absolute top-6 right-6 md:top-22 md:right-16 z-30 text-right font-mono text-[9px] md:text-[10px] tracking-widest text-text-muted hidden sm:block'>
 				[ DATA_SET: #0942 ] <br />[ VERIFIED_BY_VRTX_LAB ]
 			</div>
 
@@ -159,7 +159,7 @@ export default function BeforeAfter() {
 					/>
 
 					{/* AFTER METRIKE (Traka na dnu za mobilni, vertikalno desno za desktop) */}
-					<div className='absolute z-30 pointer-events-none w-full md:w-64 flex flex-row flex-wrap justify-center gap-2 px-4 bottom-24 left-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-16 md:left-auto md:flex-col md:gap-3'>
+					<div className='absolute z-30 pointer-events-none w-full md:w-64 flex flex-row flex-wrap justify-center gap-2 bottom-24 left-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-16 md:left-auto md:flex-col md:gap-3'>
 						{metrics.map((m) => (
 							<div
 								key={`after-${m.id}`}
@@ -201,7 +201,7 @@ export default function BeforeAfter() {
 						style={{ backgroundImage: `url('/images/before.jpg')` }}
 					/>
 					{/* BEFORE METRIKE (Preklapa se tačno preko After trake na mobilnom) */}
-					<div className='absolute z-30 pointer-events-none w-full md:w-64 flex flex-row flex-wrap justify-center gap-2 px-4 bottom-24 left-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:left-16 md:right-auto md:flex-col md:gap-3'>
+					<div className='absolute z-30 pointer-events-none w-full md:w-64 flex flex-row flex-wrap justify-center gap-2 bottom-24 left-0 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:left-16 md:right-auto md:flex-col md:gap-3'>
 						{metrics.map((m) => (
 							<div
 								key={`before-${m.id}`}
