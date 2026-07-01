@@ -14,6 +14,14 @@ export default function MetabolicTimeline() {
 
 	useGSAP(
 		() => {
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: containerRef.current,
+					start: 'top 70%',
+				},
+				defaults: { ease: 'power4.out', duration: 0.8 },
+			});
+			tl.fromTo('.header', { opacity: 0, y: 20 }, { opacity: 1, y: 0 });
 			// Animacija punjenja neonske linije dok skrolujemo kroz sekciju
 			gsap.fromTo(
 				progressLineRef.current,
@@ -47,7 +55,7 @@ export default function MetabolicTimeline() {
 						duration: 0.6,
 						scrollTrigger: {
 							trigger: triggerPoint || phase,
-							start: 'top 75%',
+							start: 'top 85%',
 							toggleActions: 'play none none reverse',
 						},
 					},
@@ -105,7 +113,7 @@ export default function MetabolicTimeline() {
 			<div className='absolute inset-0 bg-[linear-gradient(to_right,#141414_1px,transparent_1px),linear-gradient(to_bottom,#141414_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30 pointer-events-none' />
 
 			{/* HEADER SEKCIJE */}
-			<div className='max-w-5xl mx-auto mb-20 md:mb-32 relative z-10'>
+			<div className='max-w-5xl mx-auto mb-20 md:mb-32 relative z-10 header'>
 				<span className='text-cyber-lime font-mono tracking-[0.3em] text-[10px] md:text-xs uppercase block mb-3'>
 					{'// SYSTEM_ARCHITECTURE'}
 				</span>
