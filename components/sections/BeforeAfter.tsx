@@ -240,9 +240,11 @@ export default function BeforeAfter() {
 
 			{/* DONJI INFO PANEL */}
 			<div className='absolute bottom-6 left-6 md:bottom-12 md:left-1/2 md:-translate-x-1/2 z-30 bg-bg-card/60 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 border border-white/10 text-left md:text-center font-mono text-[10px] md:text-xs uppercase tracking-widest text-text-muted w-[calc(100%-3rem)] md:w-auto'>
-				<span className='text-text-primary'>Phase 01:</span> Base Conditioning{' '}
+				<span className='text-text-primary'>Program:</span> METABOLIC PROTOCOL{' '}
 				<span className='text-cyber-lime mx-1 md:mx-2'>{'//'}</span>{' '}
-				<span className='text-text-primary'>Duration:</span> 12 Weeks
+				<span className='text-text-primary'>TOTAL DURATION:</span> 12 Weeks
+				<span className='text-cyber-lime mx-1 md:mx-2'>{'//'}</span>{' '}
+				<span className='text-text-primary'>SYSTEM STATUS:</span> OPTIMIZED
 			</div>
 		</div>
 	);
