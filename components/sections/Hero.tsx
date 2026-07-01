@@ -65,7 +65,7 @@ export default function Hero() {
 			</div>
 
 			{/* 3. ASIMETRIČNI SADRŽAJ */}
-			<div className='relative z-10 w-full h-full flex flex-col justify-between p-8 md:p-16 pr-8 md:pr-30'>
+			<div className='relative z-10 w-full h-full flex flex-col justify-between p-8 md:px-16 pr-8 md:pr-30'>
 				{/* TOP ROW: Minimalni Branding */}
 				<div className='flex items-center justify-between w-full'>
 					<div className='font-display font-black text-xl tracking-widest text-text-primary'>
@@ -111,7 +111,7 @@ export default function Hero() {
 					{/* MOBILNI CTA GUMB - Vidljiv SAMO na mobilnom, fiksiran odmah ispod kartice */}
 					<div className='mobile-cta opacity-0 w-full block md:hidden'>
 						<a
-							href='#booking'
+							href='#schedulify'
 							className='w-full flex items-center justify-center py-4 bg-cyber-lime text-black font-mono font-bold uppercase text-xs tracking-widest shadow-[0_4px_20px_rgba(204,255,0,0.3)]'>
 							Book Session _
 						</a>
@@ -128,7 +128,7 @@ export default function Hero() {
 
 				{/* GLAVNI OKIDAČ OKRENUT ZA 90 STEPENI */}
 				<a
-					href='#booking'
+					href='#schedulify'
 					className='group relative flex items-center justify-center h-48 w-full transition-all duration-300'>
 					{/* Pozadinski neon koji se pali na hover duž celog sajdbara */}
 					<div className='absolute inset-0 bg-cyber-lime scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-out' />

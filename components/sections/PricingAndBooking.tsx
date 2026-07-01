@@ -164,7 +164,9 @@ export default function PricingAndBooking() {
 			{/* =================================================== */}
 			{/* === SCHEDULIFY INTEGRACIJA */}
 			{/* =================================================== */}
-			<div className='max-w-6xl mx-auto relative z-10 schedulify-container '>
+			<div
+				id='schedulify'
+				className='max-w-6xl mx-auto relative z-10 schedulify-container '>
 				<div className='border border-white/10 bg-bg-card/20 backdrop-blur-md md:p-8 relative'>
 					<div className='absolute top-0 left-0 w-3 h-3 border-t border-l border-cyber-lime' />
 					<div className='absolute bottom-0 right-0 w-3 h-3 border-b border-r border-cyber-lime' />
