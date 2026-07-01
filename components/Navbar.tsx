@@ -46,21 +46,21 @@ export default function Navbar() {
 				</div>
 
 				{/* NAV LINKS (Skriveni na mobilnom, čista estetika na desktopu) */}
-				<div className='hidden md:flex items-center gap-8 text-[11px] text-text-muted'>
+				<div className='hidden md:flex items-center gap-8 text-xs text-text-muted'>
 					<button
 						onClick={() => scrollToSection('timeline')}
 						className='hover:text-text-primary transition-colors duration-300 flex items-center gap-1'>
-						<span className='text-cyber-lime/50'>[01]</span> TIMELINE
+						<span className='text-cyber-lime/80'>[01]</span> TIMELINE
 					</button>
 					<button
 						onClick={() => scrollToSection('pricing')}
 						className='hover:text-text-primary transition-colors duration-300 flex items-center gap-1'>
-						<span className='text-cyber-lime/50'>[02]</span> PRICING
+						<span className='text-cyber-lime/80'>[02]</span> PRICING
 					</button>
 					<button
 						onClick={() => scrollToSection('faq')}
 						className='hover:text-text-primary transition-colors duration-300 flex items-center gap-1'>
-						<span className='text-cyber-lime/50'>[03]</span> FAQ
+						<span className='text-cyber-lime/80'>[03]</span> FAQ
 					</button>
 				</div>
 
