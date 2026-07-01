@@ -65,7 +65,7 @@ export default function Hero() {
 			</div>
 
 			{/* 3. ASIMETRIČNI SADRŽAJ */}
-			<div className='relative z-10 w-full h-full flex flex-col justify-between p-8 md:px-16 pr-8 md:pr-30'>
+			<div className='relative z-10 w-full h-full flex flex-col justify-between px-8 py-6 md:py-8 md:px-16 pr-8 md:pr-30'>
 				{/* TOP ROW: Minimalni Branding */}
 				<div className='flex items-center justify-between w-full'>
 					<div className='font-display font-black text-xl tracking-widest text-text-primary'>

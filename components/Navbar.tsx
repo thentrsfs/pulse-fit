@@ -100,7 +100,7 @@ export default function Navbar() {
 			{/* GLAVNI NAVBAR BAR */}
 			<nav
 				ref={navRef}
-				className={`fixed top-0 left-0 w-full z-50 bg-bg-dark/70 backdrop-blur-xl border-b border-white/5 px-6 md:px-16 py-4 font-mono select-none transition-opacity duration-300 ${isOpen ? 'bg-transparent' : 'bg-bg-dark/70'}`}>
+				className={`fixed top-0 left-0 w-full z-50 backdrop-blur-lg border-b border-white/5 px-6 md:px-16 py-3 md:py-4 font-mono select-none ${isOpen ? 'bg-transparent' : 'bg-bg-dark/40'}`}>
 				<div className='max-w-6xl mx-auto flex justify-between items-center'>
 					{/* LOGO BLOCK */}
 					<div
