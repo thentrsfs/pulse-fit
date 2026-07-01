@@ -1,5 +1,10 @@
 'use client';
 import { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function PricingAndBooking() {
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -53,6 +58,27 @@ export default function PricingAndBooking() {
 		},
 	];
 
+	useGSAP(
+		() => {
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: containerRef.current,
+					start: 'top 60%',
+					toggleActions: 'play none none none',
+				},
+				defaults: { ease: 'power4.out', duration: 0.8 },
+			});
+
+			tl.fromTo('.header', { opacity: 0, y: 40 }, { opacity: 1, y: 0 }).fromTo(
+				'.protocol-card',
+				{ opacity: 0, y: 30 },
+				{ opacity: 1, y: 0, stagger: 0.15 },
+				'-=0.8',
+			);
+		},
+		{ scope: containerRef },
+	);
+
 	return (
 		<section
 			ref={containerRef}
@@ -61,7 +87,7 @@ export default function PricingAndBooking() {
 			<div className='absolute inset-0 bg-[linear-gradient(to_right,#141414_1px,transparent_1px),linear-gradient(to_bottom,#141414_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30 pointer-events-none' />
 
 			{/* HEADER SEKCIJE */}
-			<div className='max-w-6xl mx-auto mb-20 relative z-10'>
+			<div className='max-w-6xl mx-auto mb-20 relative z-10 header'>
 				<span className='text-cyber-lime font-mono tracking-[0.3em] text-[10px] md:text-xs uppercase block mb-3'>
 					{'// SYSTEM_INVESTMENT_TIERS'}
 				</span>
@@ -75,7 +101,7 @@ export default function PricingAndBooking() {
 				{protocols.map((p) => (
 					<div
 						key={p.num}
-						className={`border p-6 md:p-8 bg-bg-card/30 backdrop-blur-md relative flex flex-col justify-between transition-all duration-300 ${
+						className={`border p-6 md:p-8 bg-bg-card/30 backdrop-blur-md relative flex flex-col justify-between transition-all duration-300 protocol-card ${
 							p.recommended
 								? 'border-cyber-lime text-text-primary shadow-[0_0_30px_rgba(204,255,0,0.1)] lg:-translate-y-2'
 								: 'border-white/10 text-text-primary hover:border-white/20'
