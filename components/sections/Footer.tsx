@@ -46,6 +46,7 @@ export default function Footer() {
 	return (
 		<footer
 			ref={footerRef}
+			id='footer'
 			className='bg-bg-dark w-full pt-24 pb-8 px-6 md:px-16 border-t border-white/5 relative overflow-hidden select-none font-mono'>
 			{/* AMBIENT GLOW */}
 			<div className='absolute bottom-0 left-0 w-96 h-96 bg-cyber-lime/5 rounded-full filter blur-[120px] pointer-events-none' />

@@ -110,6 +110,7 @@ export default function FAQ() {
 	return (
 		<section
 			ref={containerRef}
+			id='faq'
 			className='bg-bg-dark w-full py-24 px-6 md:px-16 relative overflow-hidden font-body select-none border-t border-white/5'>
 			<div className='max-w-4xl mx-auto relative z-10'>
 				{/* HEADLINE */}

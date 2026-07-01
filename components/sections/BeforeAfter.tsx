@@ -129,6 +129,7 @@ export default function BeforeAfter() {
 	return (
 		<div
 			ref={triggerRef}
+			id='before-after-section'
 			className='relative w-full h-screen bg-bg-dark overflow-hidden font-body select-none'>
 			{/* LEVO: ASIMETRIČNI NASLOV SEKCIJE */}
 			<div className='absolute top-6 left-6 md:top-12 md:left-16 z-30 max-w-md pointer-events-none'>

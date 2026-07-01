@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar';
 import Hero from '@/components/sections/Hero';
 import BeforeAfter from '@/components/sections/BeforeAfter';
 import Timeline from '@/components/sections/Timeline';
@@ -7,13 +8,14 @@ import Footer from '@/components/sections/Footer';
 
 export default function Home() {
 	return (
-		<div>
+		<>
+			<Navbar />
 			<Hero />
 			<BeforeAfter />
 			<Timeline />
 			<PricingAndBooking />
 			<Faq />
 			<Footer />
-		</div>
+		</>
 	);
 }

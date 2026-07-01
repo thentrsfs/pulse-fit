@@ -108,6 +108,7 @@ export default function MetabolicTimeline() {
 	return (
 		<section
 			ref={containerRef}
+			id='timeline'
 			className='bg-bg-dark w-full min-h-screen py-24 px-6 md:px-16 relative overflow-hidden font-body select-none'>
 			{/* BACKGROUND TECH GRID DECORATION */}
 			<div className='absolute inset-0 bg-[linear-gradient(to_right,#141414_1px,transparent_1px),linear-gradient(to_bottom,#141414_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-30 pointer-events-none' />
