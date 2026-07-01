@@ -89,13 +89,31 @@ export default function FAQ() {
 		}
 	});
 
+	useGSAP(
+		() => {
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: containerRef.current,
+					start: 'top 60%',
+				},
+			});
+
+			tl.fromTo('.header', { opacity: 0, y: 20 }, { opacity: 1, y: 0 }).fromTo(
+				'.faq-item',
+				{ opacity: 0, y: 20 },
+				{ opacity: 1, y: 0, stagger: 0.12 },
+			);
+		},
+		{ scope: containerRef },
+	);
+
 	return (
 		<section
 			ref={containerRef}
 			className='bg-bg-dark w-full py-24 px-6 md:px-16 relative overflow-hidden font-body select-none border-t border-white/5'>
 			<div className='max-w-4xl mx-auto relative z-10'>
 				{/* HEADLINE */}
-				<div className='mb-16'>
+				<div className='mb-16 header'>
 					<span className='text-cyber-lime font-mono tracking-[0.3em] text-[10px] uppercase block mb-3'>
 						{'// SYSTEM_QUERY_RESOLUTIONS'}
 					</span>
@@ -112,7 +130,7 @@ export default function FAQ() {
 						return (
 							<div
 								key={faq.id}
-								className={`border-t border-white/5 transition-colors duration-300 ${
+								className={`border-t border-white/5 transition-colors duration-300 faq-item ${
 									isOpen ? 'bg-white/1' : 'hover:bg-white/0.5'
 								}`}>
 								{/* GLAVA HARMONIKE (Dugme) */}
