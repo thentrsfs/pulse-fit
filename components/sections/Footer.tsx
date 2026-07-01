@@ -1,21 +1,60 @@
 'use client';
 import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+if (typeof window !== 'undefined') {
+	gsap.registerPlugin(ScrollTrigger);
+}
 
 export default function Footer() {
 	const footerRef = useRef<HTMLDivElement>(null);
+
+	useGSAP(
+		() => {
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: footerRef.current,
+					start: 'top 90%',
+					toggleActions: 'play none none reverse',
+				},
+				defaults: { ease: 'power4.out', duration: 1 },
+			});
+
+			tl.fromTo(
+				'.ft-col',
+				{ opacity: 0, y: 30 },
+				{ opacity: 1, y: 0, stagger: 0.2 },
+			)
+				.fromTo(
+					'.ft-logo',
+					{ opacity: 0, scale: 0.95 },
+					{ opacity: 1, scale: 1, duration: 1.2 },
+					'-=0.6',
+				)
+				.fromTo(
+					'.ft-bottom',
+					{ opacity: 0, y: 15 },
+					{ opacity: 1, y: 0, duration: 0.8 },
+					'-=0.4',
+				);
+		},
+		{ scope: footerRef },
+	);
 
 	return (
 		<footer
 			ref={footerRef}
 			className='bg-bg-dark w-full pt-24 pb-8 px-6 md:px-16 border-t border-white/5 relative overflow-hidden select-none font-mono'>
-			{/* AMBIENT GLOW (Blagi neon odsjaj u levom uglu) */}
+			{/* AMBIENT GLOW */}
 			<div className='absolute bottom-0 left-0 w-96 h-96 bg-cyber-lime/5 rounded-full filter blur-[120px] pointer-events-none' />
 
 			<div className='max-w-6xl mx-auto relative z-10 flex flex-col justify-between h-full'>
 				{/* GORNJI DEO: REŠETKA SA PODACIMA */}
 				<div className='grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 border-b border-white/5 pb-16'>
 					{/* KOLONA 1: LOKACIJA */}
-					<div className='flex flex-col gap-2'>
+					<div className='flex flex-col gap-2 ft-col'>
 						<span className='text-cyber-lime text-[10px] tracking-widest uppercase'>
 							{'// PHYSICAL_HQ'}
 						</span>
@@ -28,8 +67,8 @@ export default function Footer() {
 						</p>
 					</div>
 
-					{/* KOLONA 2: RADNO VREME TERMINALA */}
-					<div className='flex flex-col gap-2'>
+					{/* KOLONA 2: RADNO VREME */}
+					<div className='flex flex-col gap-2 ft-col'>
 						<span className='text-cyber-lime text-[10px] tracking-widest uppercase'>
 							{'// CORE_OPERATIONS'}
 						</span>
@@ -44,7 +83,7 @@ export default function Footer() {
 					</div>
 
 					{/* KOLONA 3: MREŽNI PARAMETRI */}
-					<div className='flex flex-col gap-2'>
+					<div className='flex flex-col gap-2 ft-col'>
 						<span className='text-cyber-lime text-[10px] tracking-widest uppercase'>
 							{'// DEV_CONTACT'}
 						</span>
@@ -74,7 +113,7 @@ export default function Footer() {
 					</div>
 
 					{/* KOLONA 4: SISTEMSKI STATUS */}
-					<div className='flex flex-col gap-2 md:items-end md:text-right'>
+					<div className='flex flex-col gap-2 md:items-end md:text-right ft-col'>
 						<span className='text-cyber-lime text-[10px] tracking-widest uppercase'>
 							{'// SERVER_LOG'}
 						</span>
@@ -91,21 +130,20 @@ export default function Footer() {
 					</div>
 				</div>
 
-				{/* SREDNJI DEO: BRUTALISTIČKI DŽINOVSKI LOGO */}
-				<div className='my-12 md:my-16 overflow-hidden'>
+				{/* LOGO */}
+				<div className='my-12 md:my-16 overflow-hidden ft-logo'>
 					<h1 className='font-display font-black text-[15vw] md:text-[18vw] text-white/2 uppercase leading-none tracking-tighter text-center select-none pointer-events-none'>
 						VRTX_LAB
 					</h1>
 				</div>
 
-				{/* DONJI DEO: COPYRIGHT I TVOJ POTPIS */}
-				<div className='flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-text-muted tracking-widest uppercase pt-4'>
+				{/* COPYRIGHT I POTPIS */}
+				<div className='flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-text-muted tracking-widest uppercase pt-4 ft-bottom'>
 					<div>
 						© {new Date().getFullYear()} VRTX METABOLIC LAB. ALL RIGHTS
 						RESERVED.
 					</div>
 
-					{/* TVOJ BRENDING KOJI PRODAJE TVOJ SAAS */}
 					<div className='flex items-center gap-1.5 bg-white/2 border border-white/5 px-3 py-1.5 rounded-sm'>
 						<span>BUILT BY FILIP STOJKOV</span>
 						<span className='text-white/20'>|</span>
