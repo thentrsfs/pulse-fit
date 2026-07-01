@@ -3,6 +3,7 @@ import BeforeAfter from '@/components/sections/BeforeAfter';
 import Timeline from '@/components/sections/Timeline';
 import PricingAndBooking from '@/components/sections/PricingAndBooking';
 import Faq from '@/components/sections/Faq';
+import Footer from '@/components/sections/Footer';
 
 export default function Home() {
 	return (
@@ -12,6 +13,7 @@ export default function Home() {
 			<Timeline />
 			<PricingAndBooking />
 			<Faq />
+			<Footer />
 		</div>
 	);
 }
