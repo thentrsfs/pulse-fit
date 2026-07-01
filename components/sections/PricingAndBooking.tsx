@@ -68,18 +68,12 @@ export default function PricingAndBooking() {
 				defaults: { ease: 'power4.out', duration: 0.8 },
 			});
 
-			tl.fromTo('.header', { opacity: 0, y: 40 }, { opacity: 1, y: 0 })
-				.fromTo(
-					'.protocol-card',
-					{ opacity: 0, y: 30 },
-					{ opacity: 1, y: 0, stagger: 0.15 },
-					'-=0.8',
-				)
-				.fromTo(
-					'.schedulify-container',
-					{ opacity: 0, y: 30 },
-					{ opacity: 1, y: 0 },
-				);
+			tl.fromTo('.header', { opacity: 0, y: 40 }, { opacity: 1, y: 0 }).fromTo(
+				'.protocol-card',
+				{ opacity: 0, y: 30 },
+				{ opacity: 1, y: 0, stagger: 0.15 },
+				'-=0.8',
+			);
 		},
 		{ scope: containerRef },
 	);
@@ -166,7 +160,7 @@ export default function PricingAndBooking() {
 			{/* =================================================== */}
 			<div
 				id='schedulify'
-				className='max-w-6xl mx-auto relative z-10 schedulify-container '>
+				className='max-w-6xl mx-auto relative z-10 pt-20'>
 				<div className='border border-white/10 bg-bg-card/20 backdrop-blur-md md:p-8 relative'>
 					<div className='absolute top-0 left-0 w-3 h-3 border-t border-l border-cyber-lime' />
 					<div className='absolute bottom-0 right-0 w-3 h-3 border-b border-r border-cyber-lime' />

@@ -120,18 +120,18 @@ export default function Navbar() {
 					<div className='hidden md:flex items-center gap-8 text-[11px]'>
 						<button
 							onClick={() => scrollToSection('timeline')}
-							className='text-white/50 hover:text-cyber-lime transition-colors duration-300'>
-							<span className='text-cyber-lime/40'>[01]</span> TIMELINE
+							className='text-text-primary/80 cursor-pointer hover:text-cyber-lime transition-colors duration-300'>
+							<span className='text-cyber-lime/80'>[01]</span> TIMELINE
 						</button>
 						<button
 							onClick={() => scrollToSection('pricing')}
-							className='text-white/50 hover:text-cyber-lime transition-colors duration-300'>
-							<span className='text-cyber-lime/40'>[02]</span> PRICING
+							className='text-text-primary/80 cursor-pointer hover:text-cyber-lime transition-colors duration-300'>
+							<span className='text-cyber-lime/80'>[02]</span> PRICING
 						</button>
 						<button
 							onClick={() => scrollToSection('faq')}
-							className='text-white/50 hover:text-cyber-lime transition-colors duration-300'>
-							<span className='text-cyber-lime/40'>[03]</span> FAQ
+							className='text-text-primary/80 cursor-pointer hover:text-cyber-lime transition-colors duration-300'>
+							<span className='text-cyber-lime/80'>[03]</span> FAQ
 						</button>
 					</div>
 
@@ -139,7 +139,7 @@ export default function Navbar() {
 					<div className='hidden md:block'>
 						<button
 							onClick={() => scrollToSection('booking-gateway')}
-							className='border border-cyber-lime/30 hover:border-cyber-lime bg-cyber-lime/[0.02] hover:bg-cyber-lime text-cyber-lime hover:text-black font-bold text-xs tracking-widest uppercase px-4 py-2 rounded-sm transition-all duration-300'>
+							className='border border-cyber-lime/30 hover:border-cyber-lime bg-cyber-lime/2 hover:bg-cyber-lime text-cyber-lime hover:text-black font-bold text-xs tracking-widest uppercase px-4 py-2 rounded-sm transition-all duration-300 cursor-pointer'>
 							[ BOOK_SYSTEM ]
 						</button>
 					</div>
@@ -181,7 +181,7 @@ export default function Navbar() {
 						FAQ_RESOLUTIONS
 					</button>
 
-					<div className='h-[1px] w-12 bg-white/10 my-4 mx-auto mobile-link' />
+					<div className='h-px w-12 bg-white/10 my-4 mx-auto mobile-link' />
 
 					<button
 						onClick={() => scrollToSection('booking-gateway')}
